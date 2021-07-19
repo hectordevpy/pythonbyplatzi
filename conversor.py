@@ -21,7 +21,7 @@ def conversor_to_localmoney(tipo_moneda, valor_soles, valor_argentinos, valor_co
     print("Tienes PEN " + soles + " " + "que equivale a " 
     " " + argentinos + " " + "ARS " + "y a su vez "
     + " " + colombianos + " " + "COP")
-menu = """ Hola, este es tu conversor de monedas* $_$
+menu = """ Hola, este es tu conversor de monedas FuckMoney $_$
     ¿Quieres saber a cuánto equivale la moneda de tu país en dólares o viceversa?*
     ¡Este este conversor te servirá de mucho!
     *Aplica para soles peruanos, pesos argentinos y pesos colombianos.
