@@ -1,8 +1,30 @@
+def conversor_to_dollars(tipo_moneda, valor_dollars):
+    tipo_moneda = input("¿Cuántos " + tipo_moneda + " tienes?: ")
+    tipo_moneda = float(tipo_moneda)
+    dollars = tipo_moneda / valor_dollars
+    dollars = round(dollars,2)
+    dollars = str(dollars)
+    print("Tienes $" + dollars + " " + "dólares")
+
+def conversor_to_localmoney(tipo_moneda, valor_soles, valor_argentinos, valor_colombianos):
+    tipo_moneda = input("¿Cuántos " +  tipo_moneda +  "tienes?: ")
+    tipo_moneda = float(tipo_moneda)
+    soles = tipo_moneda * valor_soles
+    soles = round(soles,2)
+    soles = str(soles)
+    argentinos = tipo_moneda * valor_argentinos
+    argentinos = round(argentinos,2)
+    argentinos = str(argentinos)
+    colombianos = tipo_moneda * valor_colombianos
+    colombianos = round(colombianos,2)
+    colombianos = str(colombianos)
+    print("Tienes PEN " + soles + " " + "que equivale a " 
+    " " + argentinos + " " + "ARS " + "y a su vez "
+    + " " + colombianos + " " + "COP")
 menu = """ Hola, este es tu conversor de monedas* $_$
-    ¿Quieres saber a cuanto equivale la moneda de tu país en dólares?**
+    ¿Quieres saber a cuánto equivale la moneda de tu país en dólares o viceversa?*
     ¡Este este conversor te servirá de mucho!
     *Aplica para soles peruanos, pesos argentinos y pesos colombianos.
-    **También puede convertir de dólares a las monedas antes mencionadas.
     1 - Soles
     2 - Dólares
     3 - Pesos Argentinos
@@ -10,46 +32,12 @@ menu = """ Hola, este es tu conversor de monedas* $_$
     Elige una opción: """
 opcion = input(menu)
 if opcion == "1":
-    soles = input("¿Cuántos soles tienes? ")
-    soles = float(soles)
-    valor_dollars = 3.95
-    dollars = soles / valor_dollars
-    dollars = round(dollars,2)
-    dollars = str(dollars)
-    print("Tienes $" + dollars + " " + "dólares")
+    conversor_to_dollars("soles", 3.95) 
 elif opcion == "2":
-     dollars = input("¿Cuántos dollars tienes? ")
-     dollars = float(dollars)
-     valor_soles = 3.95
-     soles = dollars * valor_soles
-     soles = round(soles,2)
-     soles = str(soles)
-     valor_pesos_argentinos = 96.16
-     pesos_argentinos = dollars * valor_pesos_argentinos
-     pesos_argentinos = round(pesos_argentinos,2)
-     pesos_argentinos = str(pesos_argentinos)
-     valor_pesos_colombianos = 3817.60
-     pesos_colombianos = dollars * valor_pesos_colombianos
-     pesos_colombianos = round(pesos_colombianos,2)
-     pesos_colombianos = str(pesos_colombianos)
-     print("Tienes S/" + soles + " " + "y " 
-     " " + pesos_argentinos + " " + "Pesos Argentinos " + "además "
-      + " " + pesos_colombianos + " " + "Pesos Colombianos")
+     conversor_to_localmoney("dólares ", 3.95, 96.20, 3817.60)
 elif opcion == "3":
-    pesos_argentinos = input("¿Cuántos pesos tienes? ")
-    pesos_argentinos = float(pesos_argentinos)
-    valor_dollars = 96.16
-    dollars = pesos_argentinos / valor_dollars
-    dollars = round(dollars,2)
-    dollars = str(dollars)
-    print("Tienes $" + dollars + " " + "dólares")
+    conversor_to_dollars("pesos argentinos", 96.20)
 elif opcion == "4":
-    pesos_colombianos = input("¿Cuántos pesos tienes? ")
-    pesos_colombianos = float(pesos_colombianos)
-    valor_dollars = 3817.60
-    dollars = pesos_colombianos / valor_dollars
-    dollars = round(dollars,2)
-    dollars = str(dollars)
-    print("Tienes $" + dollars + " " + "dólares")
+    conversor_to_dollars("pesos colombianos", 3817.60)
 else:
     print("¡Por favor ingresa un valor correcto!") 
