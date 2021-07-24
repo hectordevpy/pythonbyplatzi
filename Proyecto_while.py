@@ -14,25 +14,29 @@ def run():
         continue
     if opcion == 1:
         print("Buena elección ¡vamos a sumar! 😎")
-        respuesta1 = int(input("¿Cuánto es 10 + 8?: "))
-        while respuesta1 != 18:
+        numero1 = int(input("Ingresa el primer número: ")) 
+        numero2 = int(input("Ingresa el segundo número: "))
+        respuesta1 = int(input("¿Cuál es el resultado de la suma?: "))
+        while respuesta1 != numero1 + numero2:
             print("Intenta otra vez, tú puedes 💪")
-            respuesta1 = int(input("¿Cuánto es 10 + 8?: "))
+            respuesta1 = int(input("¿Cuál es el resultado de la suma?: "))
             continue
-        if respuesta1 == 18:
-            print("¡Felicidades lo lograste! 🥳")
+        if respuesta1 == numero1 + numero2:
+            print("¡Felicidades! ¡Lo lograste! 🥳")
             import pywhatkit as rep
-            rep.playonyt("Sunnie Bunnies - Last cap")        
+            rep.playonyt("Sunny Bunnies Characters In Real Life")        
     elif opcion == 2:
         print("Excelente elección ¡vamos a restar!😎 ")
-        respuesta2 = int(input("¿Cuánto es 8 - 3?: "))
-        while respuesta2 != 5:
+        numero1 = int(input("Ingresa el primer número: ")) 
+        numero2 = int(input("Ingresa el segundo número: "))
+        respuesta2 = int(input("¿Cuál es el resultado de la resta?: "))
+        while respuesta2 != numero1 - numero2:
             print("Intenta otra vez, tú puedes 💪")
-            respuesta2 = int(input("¿Cuánto es 8 - 3: "))
-        if respuesta2 == 5:
-            print("¡Felicidades lo lograste! 🥳")
+            respuesta2 = int(input("¿Cuál es el resultado de la resta?: "))
+        if respuesta2 == numero1 - numero2:
+            print("¡Felicidades! ¡Lo lograste! 🥳")
             import pywhatkit as rep
-            rep.playonyt("Sunnie Bunnies - Last cap") 
+            rep.playonyt("Sunny Bunnies Characters In Real Life") 
 
 if __name__ == '__main__':
     run()
