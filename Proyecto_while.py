@@ -1,3 +1,5 @@
+import random
+
 def run():
     menu = '''
     Hola, María Fe. 💚
@@ -14,8 +16,8 @@ def run():
         continue
     if opcion == 1:
         print("Buena elección ¡vamos a sumar! 😎")
-        numero1 = int(input("Ingresa el primer número: ")) 
-        numero2 = int(input("Ingresa el segundo número: "))
+        numero1 = print(random.randint(0,100))
+        numero2 = print(random.randint(0, 100))
         respuesta1 = int(input("¿Cuál es el resultado de la suma?: "))
         while respuesta1 != numero1 + numero2:
             print("Intenta otra vez, tú puedes 💪")
@@ -27,8 +29,8 @@ def run():
             rep.playonyt("Sunny Bunnies Characters In Real Life")        
     elif opcion == 2:
         print("Excelente elección ¡vamos a restar!😎 ")
-        numero1 = int(input("Ingresa el primer número: ")) 
-        numero2 = int(input("Ingresa el segundo número: "))
+        numero1 = random.randint(1,100) 
+        numero2 = random.randint(1,100)
         respuesta2 = int(input("¿Cuál es el resultado de la resta?: "))
         while respuesta2 != numero1 - numero2:
             print("Intenta otra vez, tú puedes 💪")
